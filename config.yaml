@@ -1,0 +1,18 @@
+baseURL: "http://AdeelK93.github.io"
+languageCode: "en-us"
+title: "Blogging About Data"
+theme: "hyde-x"
+MetaDataFormat: "yaml"
+
+author:
+  name: "Adeel Khan"
+
+taxonomies:
+  category: "categories"
+
+params:
+  theme: "theme-base-0c"
+  tagline: "Data analysis and visualization using R and JavaScript"
+  github: "https://github.com/AdeelK93"
+  linkedin: "https://www.linkedin.com/in/adeel-khan-3aaaa480/"
+  email: "https://www.linkedin.com/in/adeel-khan-3aaaa480/"

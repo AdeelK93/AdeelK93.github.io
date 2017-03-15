@@ -1,0 +1,20 @@
+{
+  "name": "adeelk93.github.io",
+  "author": "Adeel Khan",
+  "version": "1.0.0",
+  "description": "Personal website for gh-pages",
+  "license": "ISC",
+  "scripts": {
+    "start": "open http://localhost:1313 && hugo server",
+    "predeploy": "hugo",
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdeelK93/AdeelK93.github.io.git"
+  },
+  "homepage": "https://AdeelK93.github.io",
+  "devDependencies": {
+    "gh-pages": "^0.12.0"
+  }
+}
