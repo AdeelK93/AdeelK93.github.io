@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog</title>
+    <link>http://adeelk93.github.io/index.xml</link>
+    <description>Recent content on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://adeelk93.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating Interactive Collapsible Tree Diagrams in R using D3.js</title>
+      <link>http://adeelk93.github.io/post/first/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://adeelk93.github.io/post/first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://adeelk93.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://adeelk93.github.io/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m currently a data analyst at &lt;a href=&#34;http://www.molecularrebar.com/&#34;&gt;Molecular Rebar Design&lt;/a&gt; with a degree in Chemistry from &lt;a href=&#34;https://www.gwu.edu/&#34;&gt;The George Washington University&lt;/a&gt;. In our lab, I work with data along every step of the way, from data acquisition to ingestion to visualization to reporting. I use R and JavaScript as my tools of choice for analysis and automation.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m writing this blog mostly as a journal for myself, but also to document what I&amp;rsquo;ve learned and the projects I&amp;rsquo;ve worked on, on the off chance that it might help somebody else. I know, at least for me, reading other peoples&amp;rsquo; accounts of how they fixed a particular problem or overcame some obstacle has lead me to learn about things that I hadn&amp;rsquo;t even previously considered.&lt;/p&gt;
+
+&lt;p&gt;Feel free to reach out to me if you have any questions about my work!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
