@@ -11,11 +11,22 @@
     
     <item>
       <title>Creating Interactive Collapsible Tree Diagrams in R using D3.js</title>
-      <link>https://adeelk93.github.io/post/170328%20collapsibleTree/</link>
+      <link>https://adeelk93.github.io/post/17/3/28/collapsibleTree/</link>
       <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://adeelk93.github.io/post/170328%20collapsibleTree/</guid>
-      <description></description>
+      <guid>https://adeelk93.github.io/post/17/3/28/collapsibleTree/</guid>
+      <description>&lt;p&gt;A few weeks ago, I was working on a &lt;a href=&#34;https://shiny.rstudio.com/&#34;&gt;Shiny&lt;/a&gt; app that would interface with our database, allowing you to pick out a section or subsection of data and visualize your selection. The trouble was, it was tough to see the forest for the trees using a series of linked drop-down lists. You could successfully narrow down a dataset using this method, but it wasn&amp;rsquo;t very friendly or appealing, nor would it lend you any perspective as to where in the hierarchy your selection was.&lt;/p&gt;
+
+&lt;p&gt;The first thing I did was check out the &lt;a href=&#34;http://gallery.htmlwidgets.org&#34;&gt;htmlwidgets gallery&lt;/a&gt;. The &lt;a href=&#34;http://christophergandrud.github.io/networkD3/&#34;&gt;networkD3&lt;/a&gt; package seemed promising, but it took me over an hour to get my data frame formatted into the proper list structure that D3 wanted. If you&amp;rsquo;re working with R, you&amp;rsquo;re used to data frames, not JSON structures.&lt;/p&gt;
+
+&lt;p&gt;I came across the &lt;a href=&#34;https://cran.r-project.org/web/packages/data.tree/vignettes/data.tree.html&#34;&gt;data.tree&lt;/a&gt; package, which is a powerful tool for creating and manipulating hierarchal lists. I put together a little script to turn a data frame into a list and added that to my Shiny app, alongside networkD3.&lt;/p&gt;
+
+&lt;p&gt;The tree diagram was a bit too crowded with all of the nodes shown at the same time, so I searched around for examples, when I came across Mike Bostock&amp;rsquo;s &lt;a href=&#34;https://bl.ocks.org/mbostock/4339083&#34;&gt;collapsible tree example&lt;/a&gt;. This is perfect! I added a JavaScript dependency to my Shiny app and added an &lt;code&gt;.on(&#39;click&#39;)&lt;/code&gt; function that would phone home to Shiny with the most recently clicked node. This allowed me to eliminate the need for drop-down lists and use the tree diagram as my select input.&lt;/p&gt;
+
+&lt;p&gt;I found myself reusing this pattern in a couple of other visualizations and interactions, and thought it might be useful to a few other people as well, so I wrapped it up into an htmlwidget! This was my first time building an R package or an htmlwidget, but thankfully there&amp;rsquo;s plenty of &lt;a href=&#34;http://r-pkgs.had.co.nz/&#34;&gt;good reading material&lt;/a&gt;  to help point you in the right direction.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re interested, you can find &lt;code&gt;collapsibleTree&lt;/code&gt; on &lt;a href=&#34;https://cran.r-project.org/package=collapsibleTree&#34;&gt;CRAN&lt;/a&gt; and &lt;a href=&#34;https://github.com/AdeelK93/collapsibleTree&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
