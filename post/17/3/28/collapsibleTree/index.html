@@ -73,17 +73,21 @@
 <div class="content container">
   <div class="post">
     <h1 class="post-title">Creating Interactive Collapsible Tree Diagrams in R using D3.js</h1>
-    <span class="post-date">Mar 28, 2017 &middot; 2 minute read
+    <span class="post-date">Mar 28, 2017 &middot; 3 minute read
     </span>
     <p>A few weeks ago, I was working on a <a href="https://shiny.rstudio.com/">Shiny</a> app that would interface with our database, allowing you to pick out a section or subsection of data and visualize your selection. The trouble was, it was tough to see the forest for the trees using a series of linked drop-down lists. You could successfully narrow down a dataset using this method, but it wasn&rsquo;t very friendly or appealing, nor would it lend you any perspective as to where in the hierarchy your selection was.</p>
 
 <p>The first thing I did was check out the <a href="http://gallery.htmlwidgets.org">htmlwidgets gallery</a>. The <a href="http://christophergandrud.github.io/networkD3/">networkD3</a> package seemed promising, but it took me over an hour to get my data frame formatted into the proper list structure that D3 wanted. If you&rsquo;re working with R, you&rsquo;re used to data frames, not JSON structures.</p>
 
-<p>I came across the <a href="https://cran.r-project.org/web/packages/data.tree/vignettes/data.tree.html">data.tree</a> package, which is a powerful tool for creating and manipulating hierarchal lists. I put together a little script to turn a data frame into a list and added that to my Shiny app, alongside networkD3.</p>
+<p>I came across the <a href="https://cran.r-project.org/web/packages/data.tree/vignettes/data.tree.html">data.tree</a> package, which is a powerful tool for creating and manipulating hierarchal lists. Every row in your table turns into a leaf in the tree, easy as that. I put together a little script to turn a data frame into a list and added that to my Shiny app, alongside networkD3.</p>
 
 <p>The tree diagram was a bit too crowded with all of the nodes shown at the same time, so I searched around for examples, when I came across Mike Bostock&rsquo;s <a href="https://bl.ocks.org/mbostock/4339083">collapsible tree example</a>. This is perfect! I added a JavaScript dependency to my Shiny app and added an <code>.on('click')</code> function that would phone home to Shiny with the most recently clicked node. This allowed me to eliminate the need for drop-down lists and use the tree diagram as my select input.</p>
 
-<p>I found myself reusing this pattern in a couple of other visualizations and interactions, and thought it might be useful to a few other people as well, so I wrapped it up into an htmlwidget! This was my first time building an R package or an htmlwidget, but thankfully there&rsquo;s plenty of <a href="http://r-pkgs.had.co.nz/">good reading material</a>  to help point you in the right direction.</p>
+<p>I found myself reusing this pattern in a couple of other visualizations and interactions, and thought it might be useful to a few other people as well, so I wrapped it up into an htmlwidget! This was my first time building an R package, but thankfully there&rsquo;s plenty of <a href="http://r-pkgs.had.co.nz/">good reading material</a> to help make the process as painless as possible.</p>
+
+<p>This was also my first time building an htmlwidget, which was a pretty straightforward process as well. Using the htmlwidget interface made communicating with Shiny much cleaner than my previous hackish solution.</p>
+
+<p>It did feel odd working on a JavaScript project without the comfort of my <a href="https://www.npmjs.com">NPM</a>/<a href="https://webpack.github.io/">webpack</a>/<a href="https://babeljs.io/">Babel</a>/<a href="http://eslint.org/">ESlint</a>, but it didn&rsquo;t seem like any other htmlwidget authors were doing anything like that, and I didn&rsquo;t want to go rogue with my build process and use tools other developers weren&rsquo;t using. It&rsquo;s not until you step away from your developer tools that you realize how much you&rsquo;ve grown to depend on them. I have especially grown used to Babel, without which I inadvertently broke Internet Explorer compatibility by using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>.</p>
 
 <p>If you&rsquo;re interested, you can find <code>collapsibleTree</code> on <a href="https://cran.r-project.org/package=collapsibleTree">CRAN</a> and <a href="https://github.com/AdeelK93/collapsibleTree">GitHub</a>.</p>
 
