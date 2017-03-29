@@ -7,7 +7,7 @@
   "scripts": {
     "start": "open http://localhost:1313 && hugo server",
     "predeploy": "hugo",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
